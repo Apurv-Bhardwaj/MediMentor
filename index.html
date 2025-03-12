@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediMentor - Health Assistant</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Dark Mode Toggle -->
+        <button id="darkModeToggle" class="dark-mode-toggle">
+            <i class="fas fa-moon"></i>
+        </button>
+
+        <!-- Side Panel -->
+        <div class="side-panel" id="sidePanel">
+            <div class="side-panel-header">
+                <h2>Menu</h2>
+                <button id="closeSidePanel" class="close-btn">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="side-panel-content">
+                <button class="side-panel-btn"><i class="fas fa-history"></i> Medical History</button>
+                <button class="side-panel-btn"><i class="fas fa-bookmark"></i> Saved Responses</button>
+                <button class="side-panel-btn"><i class="fas fa-cog"></i> Settings</button>
+            </div>
+        </div>
+
+        <!-- Main Chat Interface -->
+        <div class="chat-container">
+            <div class="chat-header">
+                <button id="menuButton" class="menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <h1>MediMentor</h1>
+                <div id="emergencyBtn" class="emergency-btn hidden">
+                    <i class="fas fa-exclamation-circle"></i>
+                    Emergency
+                </div>
+            </div>
+
+            <div class="chat-messages" id="chatMessages">
+                <!-- Messages will be inserted here -->
+                <div class="message bot-message">
+                    <div class="message-content">
+                        Hello! I'm MediMentor, your health assistant. How can I help you today?
+                    </div>
+                </div>
+            </div>
+
+            <!-- Typing Indicator -->
+            <div class="typing-indicator hidden" id="typingIndicator">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <!-- Input Area -->
+            <div class="chat-input-container">
+                <button class="voice-input-btn" id="voiceInput">
+                    <i class="fas fa-microphone"></i>
+                </button>
+                <input type="text" id="userInput" placeholder="Type your health concern..." class="chat-input">
+                <button class="send-btn" id="sendMessage">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
